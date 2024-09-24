@@ -22,7 +22,7 @@ public class Tabeller {
 		int[] tabell = { 42, 67, 89 };
 
 		String resultat = tilStreng(tabell);
-		
+
 		System.out.println(resultat);
 	}
 
@@ -31,11 +31,11 @@ public class Tabeller {
 		StringBuilder streng = new StringBuilder("[");
 
 		for (int i = 0; i < tabell.length; i++) {
-			
+
 			streng.append(tabell[i]);
 
 			if (i < tabell.length - 1) {
-				
+
 				streng.append(",");
 			}
 		}
@@ -46,10 +46,26 @@ public class Tabeller {
 	}
 
 	// c)
-	public static int summer(int[] tabell) {
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden summer ikke implementert");
+	public static int summer(int[] tabell) {
+		
+		int[] heltall = { 1, 2, 3, 4, 5 };
+
+		int total = summer(heltall);
+
+		System.out.println("Summen av tallene i tabellen er: " + total);
+
+		int sum = 0;
+
+		for (int tall : tabell) {
+
+			sum += tall;
+		}
+
+		System.out.println(sum);
+
+		return sum;
+
 	}
 
 	// d)
