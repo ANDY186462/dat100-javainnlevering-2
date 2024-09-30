@@ -1,5 +1,7 @@
 package no.hvl.dat100.tabeller;
 
+import no.hvl.dat100.tabeller.Tabeller.tallSjekker;
+
 public class Tabeller {
 
 	// a)
@@ -13,7 +15,6 @@ public class Tabeller {
 	}
 
 	// b)
-	
 
 	public static void main(String[] args) {
 
@@ -46,7 +47,7 @@ public class Tabeller {
 	// c)
 
 	public static int summer(int[] tabell) {
-		
+
 		int[] heltall = { 1, 2, 3, 4, 5 };
 
 		int total = summer(heltall);
@@ -67,38 +68,39 @@ public class Tabeller {
 	}
 
 	// d)
-	public class TallSjekker {
-
-	    public static boolean finnesTall(int[] tabell, int tall) {
-	        
-	        for (int i = 0; i < tabell.length; i++) {
-	           
-	            if (tabell[i] == tall) {
-	                return true; // Tallet er funnet
-	            }
-	        }
-	        return false; 
-	    }
-
-	    
-	        }
-	    
-
-
 	
 
+		public static boolean finnesTall(int[] tabell, int tall) {
+
+			for (int i = 0; i < tabell.length; i++) {
+
+				if (tabell[i] == tall) {
+					return true; // Tallet er funnet
+				}
+			}
+			return false; // Finner ikkje tallet
+		}
+
+			
 	// e)
 	public static int posisjonTall(int[] tabell, int tall) {
+		
+		for (int i = 0; i < tabell.length; i++) {
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden posisjonTall ikke implementert");
+			if (tabell[i] == tall) {
+				return i; 
+			}
+		}
+		return -1; 
+		
 	}
 
 	// f)
 	public static int[] reverser(int[] tabell) {
-
-		// TODO
-		throw new UnsupportedOperationException("Metoden reverser ikke implementert");
+		
+		for (int i = 0; i < tabell.length; i++) {
+		
+	}return;
 	}
 
 	// g)
