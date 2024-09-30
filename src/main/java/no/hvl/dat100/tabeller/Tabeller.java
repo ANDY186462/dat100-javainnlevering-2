@@ -13,9 +13,7 @@ public class Tabeller {
 	}
 
 	// b)
-	public static void tilstreng(int[] tabell) {
-
-	}
+	
 
 	public static void main(String[] args) {
 
@@ -69,12 +67,25 @@ public class Tabeller {
 	}
 
 	// d)
-	public static boolean finnesTall(int[] tabell, int tall) {
+	public class TallSjekker {
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden finnesTall ikke implementert");
+	    public static boolean finnesTall(int[] tabell, int tall) {
+	        
+	        for (int i = 0; i < tabell.length; i++) {
+	           
+	            if (tabell[i] == tall) {
+	                return true; // Tallet er funnet
+	            }
+	        }
+	        return false; 
+	    }
 
-	}
+	    
+	        }
+	    
+
+
+	
 
 	// e)
 	public static int posisjonTall(int[] tabell, int tall) {
