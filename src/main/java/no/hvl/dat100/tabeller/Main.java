@@ -22,5 +22,28 @@ public class Main {
 		} else {
 			System.out.println("Tallet " + tall + " finnes ikke i tabellen.");
 		}
+
+		int[] reversTabell = Tabeller.reverser(tabell);
+		System.out.println("Reversert tabell: ");
+		for (int r : reversTabell) {
+			System.out.print(r + " ");
+		}
+		boolean Sortert = Tabeller.erSortert(tabell);
+		if (Sortert != false) {
+			System.out.println(tabell + "er sortert riktig");
+		} else {
+			System.out.println(tabell + "er sortert feil");
+
+		}
+
+		int[] tabell1 = { 1, 2, 3 };
+		int[] tabell2 = { 4, 5, 6 };
+		int[] resultat = Tabeller.settSammen(tabell1, tabell2);
+
+		for (int t : resultat) {
+			System.out.println(t + " ");
+		}
+
 	}
+
 }
