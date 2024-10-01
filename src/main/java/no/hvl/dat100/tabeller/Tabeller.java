@@ -103,22 +103,16 @@ public class Tabeller {
 	// g)
 	public static boolean erSortert(int[] tabell) {
 
-		for (int i = 1; i < tabell.length; i++) {
-			if (tabell[i] < tabell[i - 1]) { // Endret til '<' for å sjekke sortering i stigende rekkefølge
+		for (int i = 0; i < tabell.length - 1; i++) {
 
-				for (int i1 = 0; i1 < tabell.length - 1; i1++) {
-					if (tabell[i1] > tabell[i1 + 1]) {
+			if (tabell[i] > tabell[i + 1]) {
 
-						return false;
-					}
-				}
-
-				return true;
+				return false;
 
 			}
 		}
-		return false;
 
+		return true;
 	}
 
 	// h)
@@ -129,7 +123,6 @@ public class Tabeller {
 		for (int i = 0; i < tabell1.length; i++) {
 
 			tabell3[i] = tabell1[i];
-
 		}
 
 		for (int j = 0; j < tabell2.length; j++) {
@@ -137,10 +130,6 @@ public class Tabeller {
 			tabell3[tabell1.length + j] = tabell2[j];
 		}
 
-		for (int j = 0; j < tabell2.length; j++) {
-			tabell3[j] = tabell2[j];
-
-		}
 		return tabell3;
 	}
 }
