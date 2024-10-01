@@ -33,11 +33,15 @@ public class Main {
 
 		System.out.println("Reversert tabell: ");
 
+		System.out.print("Reversert tabell: ");
+
 		for (int r : reversTabell) {
 
 			System.out.print(r + " ");
 
 		}
+
+		System.out.println();
 
 		System.out.println();
 
@@ -62,8 +66,16 @@ public class Main {
 		for (int t : resultat) {
 
 			System.out.println(t + " ");
+
+			int[] tabell1 = { 8, 9, 10 };
+			int[] tabell2 = { 11, 12, 13 };
+			int[] resultat = Tabeller.settSammen(tabell1, tabell2);
+
+			for (int t : resultat) {
+				System.out.print(t + " ");
+
+			}
+
 		}
-
 	}
-
 }
