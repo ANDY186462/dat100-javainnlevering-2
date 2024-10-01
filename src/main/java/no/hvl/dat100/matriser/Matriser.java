@@ -4,49 +4,67 @@ public class Matriser {
 
 	// a)
 	public static void skrivUt(int[][] matrise) {
-		
-		// TODO
-		throw new UnsupportedOperationException("Metoden skrivUt ikke implementert");
+		for (int[] rad : matrise) {
+			for (int element : rad) {
+				System.out.print(element + " ");
+			}
+			System.out.println();
+		}
+
 	}
 
 	// b)
 	public static String tilStreng(int[][] matrise) {
+		StringBuilder sb = new StringBuilder();
+		for (int i = 0; i < matrise.length; i++) {
+			for (int j = 0; j < matrise[i].length; j++) {
+				sb.append(matrise[i][j]);
+				if (j < matrise[i].length - 1) {
+					sb.append(" ");
+				}
+			}
+			if (i < matrise.length - 1) {
+				sb.append("\n");
+			}
+		}
+		sb.append("\n");
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden tilStreng ikke implementert");
-		
+		return sb.toString();
 	}
 
 	// c)
+
 	public static int[][] skaler(int tall, int[][] matrise) {
-		
-		// TODO
-		throw new UnsupportedOperationException("Metoden skaler ikke implementert");
-	
+
+		int[][] nyMatrise = new int[matrise.length][matrise[0].length];
+
+		for (int i = 0; i < matrise.length; i++) {
+			for (int j = 0; j < matrise[i].length; j++) {
+				nyMatrise[i][j] = matrise[i][j] * tall;
+			}
+		}
+
+		return nyMatrise;
 	}
 
 	// d)
-	public static boolean erLik(int[][] a, int[][] b) {
+	public static boolean erLik(int[][] mat1, int[][] mat2) {
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden erLik ikke implementert");
-		
-	}
-	
-	// e)
-	public static int[][] speile(int[][] matrise) {
+		if (mat1.length != mat2.length) {
+			return false;
+		}
+		if (mat1[0].length != mat2[0].length) {
+			return false;
+		}
 
-		// TODO
+		for (int i = 0; i < mat1.length; i++) {
+			for (int j = 0; j < mat1[i].length; j++) {
+				if (mat1[i][j] != mat2[i][j]) {
+					return false;
+				}
+			}
+		}
 
-		throw new UnsupportedOperationException("Metoden speile ikke implementert");
-	
-	}
-
-	// f)
-	public static int[][] multipliser(int[][] a, int[][] b) {
-
-		// TODO
-		throw new UnsupportedOperationException("Metoden multipliser ikke implementert");
-	
+		return true;
 	}
 }
