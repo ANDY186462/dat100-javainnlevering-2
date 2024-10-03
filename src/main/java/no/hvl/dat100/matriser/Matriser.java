@@ -22,7 +22,7 @@ public class Matriser {
 					result += " ";
 				}
 			}
-			result += "\n";
+			result += " \n";
 		}
 		return result;
 	}
